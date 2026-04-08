@@ -1,1 +1,16 @@
-{"rewrites":[{"source":"/:slug","destination":"https://mhmadvkbwjsbqpkdqhmk.supabase.co/functions/v1/short-link-resolve?slug=:slug"},{"source":"/","destination":"https://bluepad.ai"}],"headers":[{"source":"/:slug","headers":[{"key":"Cache-Control","value":"public, s-maxage=300, stale-while-revalidate=600"},{"key":"X-Robots-Tag","value":"noindex"}]}]}
+{
+  "rewrites": [
+    { "source": "/:slug", "destination": "/api/:slug" }
+  ],
+  "redirects": [
+    { "source": "/", "destination": "https://bluepad.ai", "statusCode": 302 }
+  ],
+  "headers": [
+    {
+      "source": "/:slug",
+      "headers": [
+        { "key": "X-Robots-Tag", "value": "noindex" }
+      ]
+    }
+  ]
+}
